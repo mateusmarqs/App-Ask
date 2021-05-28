@@ -1,0 +1,8 @@
+Comando para instalar biblioteca body-parser, responsavel por traduzir os dados enviados eplo formulario em uma estrutura js 
+npm install body-parser --save
+
+Sequelize, biblioteca para trabalhar com SQL e node.
+npm install sequelize --save
+
+Para o sequelize trabalhar com mysql ele debende dessa biblioteca:
+npm install mysql2 --save
