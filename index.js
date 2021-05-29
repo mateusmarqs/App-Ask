@@ -1,6 +1,5 @@
  const express = require("express");
  const app = express();
- const bodyParser = require("body-parser")
  const connection = require("./database/database")
  const Pergunta = require("./database/Pergunta")
  const Resposta = require("./database/Resposta")
@@ -20,8 +19,11 @@ app.set('view engine', 'ejs')
 app.use(express.static("public"))
 
 //Body parses
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
+app.use (express.urlencoded ({
+   extended: true
+}))
+
+app.use (express.json())
  
 app.get("/", (req, res) => {
    //SELECT * FROM perguntas
